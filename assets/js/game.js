@@ -25,7 +25,7 @@ function create() {
     mainchar = game.add.sprite(200, 516, 'maincharacter'); // Will add the room background to the desktop. It will place the upper left part of the image to the upper left part of the screen.
     mainchar.anchor.x = 0.5;
     mainchar.anchor.y = 0.9;
-    
+    game.camera.follow(mainchar);
 
     walkableGrid = []; //Lets make the grid that easy star will define as the walkable points. 
     var gridCollection;	 //This will collect the 2 dimensional array grids and push it to the walkableGrid.
