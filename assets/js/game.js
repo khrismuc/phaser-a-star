@@ -17,6 +17,7 @@ function preload() {
 //The first function called when we start our game
 function create() {
     //We are going to obtain the width and height of the background room.
+    game.world.setbounds(0,0,800,600);
     var backWidth = game.cache.getImage("background").width; var backHeight = game.cache.getImage("background").height;
     bmd = game.make.bitmapData(backWidth, backHeight); //Getting ready to determine the room size and get the pixel data of the walkable path.
     bmd.load('walkablepath'); //This will load the walkable path into memory. 
@@ -24,6 +25,7 @@ function create() {
     mainchar = game.add.sprite(200, 516, 'maincharacter'); // Will add the room background to the desktop. It will place the upper left part of the image to the upper left part of the screen.
     mainchar.anchor.x = 0.5;
     mainchar.anchor.y = 0.9;
+    
 
     walkableGrid = []; //Lets make the grid that easy star will define as the walkable points. 
     var gridCollection;	 //This will collect the 2 dimensional array grids and push it to the walkableGrid.
